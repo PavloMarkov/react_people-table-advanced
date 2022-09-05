@@ -1,3 +1,6 @@
+import { URLS } from '../utils/URLS';
+import { HeaderNavLink } from './HeaderNavLink';
+
 export const Navbar = () => {
   return (
     <nav
@@ -8,15 +11,14 @@ export const Navbar = () => {
     >
       <div className="container">
         <div className="navbar-brand">
-          <a className="navbar-item" href="#/">Home</a>
-
-          <a
-            aria-current="page"
-            className="navbar-item has-background-grey-lighter"
-            href="#/people"
-          >
-            People
-          </a>
+          <HeaderNavLink
+            to={URLS.baseHome}
+            name="Home"
+          />
+          <HeaderNavLink
+            to={URLS.people}
+            name="People"
+          />
         </div>
       </div>
     </nav>
